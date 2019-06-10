@@ -18,7 +18,7 @@ using namespace std;
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<iostream>
-#include<conio.h>  // remove this line if not using Windows OS
+// #include<conio.h>  // remove this line if not using Windows OS
 #define SHOW_STEPS // un-comment | comment this line to show steps or not
 
 // const global variables
@@ -56,13 +56,13 @@ int main(void) {
 
     if (!capVideo.isOpened()) {                                                 // if unable to open video file
         std::cout << "error reading video file" << std::endl << std::endl;      // show error message
-        _getch();																// remove this line if not using Windows OS
+        // _getch();																// remove this line if not using Windows OS
         return(0);                                                              // and exit program
     }
 
     if (capVideo.get(CV_CAP_PROP_FRAME_COUNT) < 2) {
         std::cout << "error: video file must have at least two frames";
-        _getch();																// remove this line if not using Windows OS
+        // _getch();																// remove this line if not using Windows OS
         return(0);
     }
 
